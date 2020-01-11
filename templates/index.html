@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Marks Management System</title>
+        <link rel="stylesheet" href="../static/css/normalize.css">
+        <link rel="stylesheet" href="../static/css/main.css" media="screen" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../static/css/bootstrap.css">
+        <link rel="stylesheet" href="../static/css/style-portfolio.css">
+        <link rel="stylesheet" href="../static/css/picto-foundry-food.css" />
+        <link rel="stylesheet" href="../static/css/jquery-ui.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+        <!-- <link rel="icon" href="favicon-1.ico" type="image/x-icon"> -->
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="row">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Bangalore Institute Of Technology</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav main-nav  clear navbar-right ">
+                            <li><a class="navactive color_animation" href="#top">Home</a></li>
+                            <li><a class="color_animation" href="#story">About</a></li>
+                            <li><a class="color_animation" href="#con">Contact Us</a></li>
+                            <li><a class="color_animation" href="{{ url_for('login') }}">Login</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+         
+         <div id="top" class="starter_container bg">
+            <div class="follow_container">
+                <div class="col-md-6 col-md-offset-3">
+                    <p class="top-title"> Department of ISE </p>
+                    <br/>
+                    <p class="second-title"> Check Your Marks </p>
+
+                        
+                    
+<!--FORM DESIGN-->
+        <section>
+            <div class="search">
+                <div class="row">
+                    <div class="col-md-12">
+                                <form class="ordering" style="color:black;" method="POST" action="{{ url_for('sdisplay') }}">
+                                    <div class="search1">
+                                        <input id="usn" name="usn" placeholder="Enter USN" style="border-radius: 10px;" required />
+                                    </div>
+				                    <div class="search1">
+                                            <select name="selectsem" class="orderby" id="selectsem" name="selectsem" style="border-radius: 10px;">
+                                            <option value="0" selected='selected'>Choose Semester</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="style="border-radius: 10px;>5</option>
+                                            <option value="6">6</option>
+					                        <option value="7">7</option>
+					                        <option value="8">8</option>
+                                        </select>
+                                        </div>
+            <button class="submit" type="submit" name="btn2" style="border-radius: 10px;">
+                                         Submit</button>
+                                                
+
+                                  
+                                </form>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        
+
+        <!-- ============ About Us ============= -->
+
+        <section id="story" class="description_content">
+            <div class="text-content container">
+                <div class="col-md-6">
+                    <h1>About us</h1>
+                    <br/>
+                    <p class="desc-text">Bangalore Institute of Technology is an engineering college offering undergraduate and graduate engineering courses, 
+                    affiliated to the Visvesvaraya Technological University, Belgaum located in Bangalore. </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-section">
+                       
+                       <img src="../static/images/220px-Bangalore_Institute_of_Technology_logo.png" width="250" height="220">
+                       <div class="img-section-space"></div>
+                       <div></div>
+                      
+                   </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="sub_footer">
+            <div class="container" id="con">
+                <div class="col-md-4"><p class="sub-footer-text text-center">Bangalore Institute of technology</p></div>
+                <div class="col-md-4"><p class="sub-footer-text text-center">Department Of ISE </p></div>
+                <div class="col-md-4"><p class="sub-footer-text text-center">bitise@gmail.com </p></div>
+            </div>
+        </footer>
+
+
+        <script type="text/javascript" src="../static/js/jquery-1.10.2.min.js"> </script>
+        <script type="text/javascript" src="../static/js/bootstrap.min.js" ></script>
+        <script type="text/javascript" src="../static/js/jquery-1.10.2.js"></script>     
+        <script type="text/javascript" src="../static/js/jquery.mixitup.min.js" ></script>
+        <script type="text/javascript" src="../static/js/main.js" ></script>
+
+    </body>
+</html>
